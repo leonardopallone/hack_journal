@@ -1,14 +1,27 @@
 import { Link } from 'react-router-dom';
 import { AuthConsumer } from '../../providers/AuthProvider';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Hackathon } from '../styles/shared';
+import { NavigationItems } from '../styles/shared';
+import { NavItems } from '../styles/shared';
 
 const MainNavbar = ({ user, handleLogout }) => {
   
   const rightNavItem = () => {
     if (user) {
       // this is links where you see once login in
+     
+
       return (
         <>
+
+        
+          <NavigationItems  onClick={() => handleLogout()}>
+          <NavItems>Logout</NavItems>
+          </NavigationItems>
+      
+         
+
           <Nav.Link onClick={() => handleLogout()}>
             Logout
           </Nav.Link>
@@ -17,22 +30,23 @@ const MainNavbar = ({ user, handleLogout }) => {
               Goals
             </Link>
           </Nav.Link>
+
         </>
       )
     } else {
       // link show when not logged in
       return (
         <>
-          <Nav.Link>
+          <NavigationItems >
             <Link to='/login'>
-              Login
+            <NavItems>Login</NavItems>
             </Link>
-          </Nav.Link>
-          <Nav.Link>
+          </NavigationItems >
+          <NavigationItems >
             <Link to='/register'>
-              Sign Up
+            <NavItems>Sing Up</NavItems>
             </Link>
-          </Nav.Link>
+          </NavigationItems >
         </>
       )
     }
@@ -42,7 +56,7 @@ const MainNavbar = ({ user, handleLogout }) => {
     <>
       <Navbar collapseOnSelect expand="lg">
         <Container>
-          <Link to='/'><Navbar.Brand>Hackathon 2</Navbar.Brand></Link>
+          <Link to='/'><Hackathon>Hackathon 2</Hackathon></Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -55,6 +69,7 @@ const MainNavbar = ({ user, handleLogout }) => {
         </Container>
       </Navbar>
     </>
+   
   )
 }
 
