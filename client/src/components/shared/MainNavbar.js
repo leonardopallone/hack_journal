@@ -14,12 +14,23 @@ const MainNavbar = ({ user, handleLogout }) => {
 
       return (
         <>
+
         
           <NavigationItems  onClick={() => handleLogout()}>
           <NavItems>Logout</NavItems>
           </NavigationItems>
       
          
+
+          <Nav.Link onClick={() => handleLogout()}>
+            Logout
+          </Nav.Link>
+          <Nav.Link>
+          <Link to='/goals'>
+              Goals
+            </Link>
+          </Nav.Link>
+
         </>
       )
     } else {
