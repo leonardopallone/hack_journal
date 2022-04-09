@@ -5,12 +5,13 @@ export const ContainerMain = styled.div`
 padding: 0;
 box-sizing: border-box;
 background-color: #F5F5F5;
-
+padding-bottom:30px
 `
 export const ContainerHome = styled.div`
 
 height:50vh;
 background-color:#F5F5F5;
+
 
 `
 
@@ -70,21 +71,22 @@ color: #61A4BC;
 `
 
 
-export const IMG = styled.img`
+// export const CardImg = styled.img`
 
-width: 20rem;
-height: 25rem;
-margin-left: 50px;
-border-radius: 20%;
-margin-top: 40px;
-margin-bottom: 50px;
-`
+// width: 20rem;
+// height: 25rem;
+// margin-left: 50px;
+// border-radius: 20%;
+// margin-top: 40px;
+// margin-bottom: 50px;
+// `
 
 export const Title = styled.h1`
 
 font-family: "cursive", sans-serif;
 padding: 10px;
 padding-bottom:10px;
+margin-bottom: 50px;
 color:white;
 font-size: 12px;
 text-align:center;
@@ -94,6 +96,18 @@ border-radius:25px;
 margin-left:34rem;
 
 `
+export const CardTitle = styled.h1`
+text-align:center;
+font-weight: 400;
+font-size: 22px;
+`
+export const CardText = styled.h6`
+font-size: 10px;
+text-align:center;
+`
+// export const CardImg = styled.img`
+// width:18rem;
+// `
 
 // export const Acc = styled.div `
 
