@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
-const Vision_boardForm = ({ addVision_board, id, title, complete, updateVision_board, setEdit }) => {
-  const [vision_board, setVision_board] = useState({ title: '', complete: false })
+const VisionBoardForm = ({ addVisionBoard, id, title, complete, updateVisionBoard, setEdit }) => {
+  const [visionBoard, setVisionBoard] = useState({ title: '', complete: false })
 
   useEffect( () => {
     if (id) {
-      setVision_board({ title, complete })
+      setVisionBoard({ title, complete })
     }
   }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (id) {
-      updateVision_board(id, vision_board)
+      updateVisionBoard(id, visionBoard)
       setEdit(false)
     } else {
-      addVision_board(vision_board)
+      addVisionBoard(visionBoard)
     }
-    setVision_board({ title: '', complete: false })
+    setVisionBoard({ title: '', complete: false })
   }
 
   return (
@@ -26,8 +26,8 @@ const Vision_boardForm = ({ addVision_board, id, title, complete, updateVision_b
       <form onSubmit={handleSubmit}>
         <input
           name='title'
-          value={vision_board.title}
-          onChange={(e) => setVision_board({...vision_board, title: e.target.value })}
+          value={visionBoard.title}
+          onChange={(e) => setVisionBoard({...visionBoard, title: e.target.value })}
           placeholder="Title"
           required
         />
@@ -36,8 +36,8 @@ const Vision_boardForm = ({ addVision_board, id, title, complete, updateVision_b
             <input
               type="checkbox"
               name='complete'
-              checked={vision_board.complete}
-              onChange={(e) => setVision_board({...vision_board, complete: !vision_board.complete })}
+              checked={visionBoard.complete}
+              onChange={(e) => setVisionBoard({...visionBoard, complete: !visionBoard.complete })}
             />
           :
           null
@@ -50,4 +50,4 @@ const Vision_boardForm = ({ addVision_board, id, title, complete, updateVision_b
   )
 }
 
-export default Vision_boardForm;
+export default VisionBoardForm;

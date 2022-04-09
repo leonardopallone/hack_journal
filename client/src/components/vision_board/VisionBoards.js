@@ -17,8 +17,8 @@
             .catch( err => console.log(err) )
           }, [])
         
-          const addVisionBoard = (goal) => {
-            axios.post(`api/users/${user.id}/visionBoards`, { goal })
+          const addVisionBoard = (visionBoard) => {
+            axios.post(`api/users/${user.id}/visionBoards`, { visionBoard })
             .then( res => {
               setVisionBoards([...visionBoards, res.data])
             })
@@ -27,13 +27,13 @@
           const updateVisionBoard = (id, visionBoard) => {
             axios.put(`/api/users/${user.id}/visionBoards/${id}`, { visionBoard })
             .then( res => {
-              const updatedGoalNames = visionBoards.map ( g => {
+              const updatedVisionBoardNames = visionBoards.map ( g => {
                 if (g.id === id) {
                   return res.data
                 }
                 return g
               })
-              setVisionBoards(updatedGoalNames)
+              setVisionBoards(updatedVisionBoardNames)
             })
             .catch( err => console.log(err) )
           }
