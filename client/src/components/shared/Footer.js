@@ -1,7 +1,7 @@
 
 const Footer = () => (
   <>
-    <p>&#169; {(new Date().getFullYear())}</p>
+    <p style={{textAlign:'center'}}>&#169; {(new Date().getFullYear())}</p>
   </>
 )
 

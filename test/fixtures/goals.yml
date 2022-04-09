@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  new_goal: MyString
+  diff: MyString
+  accomp: false
+  user: one
+
+two:
+  new_goal: MyString
+  diff: MyString
+  accomp: false
+  user: two

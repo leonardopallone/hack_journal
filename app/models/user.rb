@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
 
   has_many :journals, dependent: :destroy
   
+  has_many :goals, dependent: :destroy
 end
