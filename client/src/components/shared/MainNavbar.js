@@ -12,6 +12,11 @@ const MainNavbar = ({ user, handleLogout }) => {
           <Nav.Link onClick={() => handleLogout()}>
             Logout
           </Nav.Link>
+          <Nav.Link>
+          <Link to='/goals'>
+              Goals
+            </Link>
+          </Nav.Link>
         </>
       )
     } else {
