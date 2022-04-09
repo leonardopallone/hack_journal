@@ -15,12 +15,20 @@ const MainNavbar = ({ user, handleLogout }) => {
       return (
         <>
 
+         <Nav.Link>
+            <Link to='/journals'>
+              Journal
+            </Link>
+          </Nav.Link>
+
+
         
           <NavigationItems  onClick={() => handleLogout()}>
           <NavItems>Logout</NavItems>
           </NavigationItems>
       
          
+
 
           <Nav.Link onClick={() => handleLogout()}>
             Logout

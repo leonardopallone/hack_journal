@@ -7,8 +7,14 @@ import MainNavbar from './components/shared/MainNavbar';
 import Nomatch from './components/shared/Nomatch';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+
+import Journals from "./components/journals/Journals";
+
+
+
 import Goals from './components/goals/Goals';
 import GoalForm from './components/goals/GoalForm';
+
 const App = () => (
   <>
     <MainNavbar />
@@ -16,6 +22,7 @@ const App = () => (
       <>
         <Routes>
           <Route path='/' element={ <Home /> } />
+          <Route path='/journals' element={ <Journals /> } />
           <Route path='/' element={ <ProtectedRoute />}>
             {/* Your Protected routes go here */}
             <Route path='/goals' element={<Goals />} />
