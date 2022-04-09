@@ -7,6 +7,8 @@ import MainNavbar from './components/shared/MainNavbar';
 import Nomatch from './components/shared/Nomatch';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import Journals from "./components/journals/Journals";
+
 
 const App = () => (
   <>
@@ -15,6 +17,7 @@ const App = () => (
       <>
         <Routes>
           <Route path='/' element={ <Home /> } />
+          <Route path='/journals' element={ <Journals /> } />
           <Route path='/' element={ <ProtectedRoute />}>
             {/* Your Protected routes go here */}
           </Route>
